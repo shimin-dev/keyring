@@ -1,4 +1,4 @@
-module github.com/shimin-dev/go-keyring
+module github.com/shimin-dev/keyring
 
 go 1.18
 
