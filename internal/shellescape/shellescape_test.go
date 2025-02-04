@@ -3,7 +3,7 @@ package shellescape_test
 import (
 	"testing"
 
-	"github.com/shimin-dev/go-keyring/internal/shellescape"
+	"github.com/shimin-dev/keyring/internal/shellescape"
 )
 
 func assertEqual(t *testing.T, s, expected string) {

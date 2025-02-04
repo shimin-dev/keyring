@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	dbus "github.com/godbus/dbus/v5"
-	ss "github.com/shimin-dev/go-keyring/secret_service"
+	ss "github.com/shimin-dev/keyring/secret_service"
 )
 
 type secretServiceProvider struct{}
