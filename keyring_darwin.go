@@ -22,7 +22,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/zalando/go-keyring/internal/shellescape"
+	"github.com/shimin-dev/keyring/internal/shellescape"
 )
 
 const (
