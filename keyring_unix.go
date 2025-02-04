@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	dbus "github.com/godbus/dbus/v5"
-	ss "github.com/zalando/go-keyring/secret_service"
+	ss "github.com/shimin-dev/go-keyring/secret_service"
 )
 
 type secretServiceProvider struct{}
@@ -27,8 +27,8 @@ func (s secretServiceProvider) Set(service, user, pass string) error {
 	defer svc.Close(session)
 
 	attributes := map[string]string{
-		"username": user,
-		"service":  service,
+		"account": user,
+		"service": service,
 	}
 
 	secret := ss.NewSecret(session.Path(), pass)
@@ -55,8 +55,8 @@ func (s secretServiceProvider) findItem(svc *ss.SecretService, service, user str
 	collection := svc.GetLoginCollection()
 
 	search := map[string]string{
-		"username": user,
-		"service":  service,
+		"account": user,
+		"service": service,
 	}
 
 	err := svc.Unlock(collection.Path())
